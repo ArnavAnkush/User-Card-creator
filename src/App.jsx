@@ -13,8 +13,8 @@ const App = () => {
 
 
   const deleteUser = (id) => {
-    let filterUser = users.filter((val, index) => {
-      return index !== id
+    let filterUser = users.filter((val) => {
+      return val.id !== id
     })
     setUsers(filterUser)
     localStorage.setItem("users", JSON.stringify(filterUser))
